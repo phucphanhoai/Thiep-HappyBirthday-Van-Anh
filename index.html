@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="./img/CILKGax.png" />
+        <!-- 1. Tiêu đề của file index -->
+        <title>Happy birthday</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body class="page__main">
+        <div class="buttons">
+            <!-- Chữ ở menu bạn có thể sửa lại theo ý của bạn -->
+            <a href="index.html" class="btn btn-bir">Happy birthday Vân Anh ❤️️</a>
+            <a href="timeline.html" class="btn btn-timeline">Lời Chúc Của Tui Nè ❤️️</a>
+            <a href="gallery.html" class="btn btn-gallery">Ảnh Của Người Con Gái Tui Yêu ❤️️</a>
+        </div>
+
+        <!-- 2. Phần ảnh của người bạn mún chúc -->
+        <img src="./img/MyAvatar.jpg" alt="" class="cover" />
+
+        <!-- 3. Phần nhạc -->
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Play Music</title>
+            <style>
+                #playButton {
+                    padding: 5px 10px;
+                    font-size: 14px;
+                    background-color: #d3d3d3; /* Màu chìm */
+                    color: rgb(12, 12, 12);
+                    border: none;
+                    border-radius: 1px;
+                    cursor: pointer;
+                }
+        
+                #playButton:hover {
+                    background-color: #a9a9a9; /* Màu khi di chuột */
+                }
+            </style>
+        </head>
+        <body>
+            <button id="playButton">Play Music</button>
+            <audio id="myAudio" src="music/Chúc Mừng.mp3" type="audio/mpeg"></audio>
+        
+            <script>
+                document.getElementById("playButton").addEventListener("click", function() {
+                    var audio = document.getElementById("myAudio");
+                    audio.play().catch(function(error) {
+                        console.log("Play was prevented: ", error);
+                    });
+                });
+        
+                // Tự động kích hoạt sự kiện click khi trang được tải
+                window.addEventListener('load', function() {
+                    document.getElementById("playButton").click();
+                });
+            </script>
+        </body>
+        </html>
+    </body>
+</html>

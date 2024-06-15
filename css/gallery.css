@@ -1,0 +1,75 @@
+body {
+  background: url("../img/wood.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 80vw;
+  height: 80vh;
+  animation: arrangeImages 2s forwards;
+}
+
+.gallery-item {
+  width: 95%;
+  height: 95%;
+  overflow: hidden;
+  transform: scale(0);
+}
+
+.gallery img {
+  width: 78%;
+  height: 20%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@keyframes arrangeImages {
+  0% {
+      opacity: 0;
+      transform: scale(0);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.gallery-item:nth-child(1) {
+  animation: showImage 1s forwards 1.5s;
+}
+.gallery-item:nth-child(2) {
+  animation: showImage 2s forwards 2.5s;
+}
+.gallery-item:nth-child(3) {
+  animation: showImage 3s forwards 3s;
+}
+.gallery-item:nth-child(4) {
+  animation: showImage 2s forwards 3s;
+}
+.gallery-item:nth-child(5) {
+  animation: showImage 0.5s forwards 2.5s;
+}
+.gallery-item:nth-child(6) {
+  animation: showImage 0.5s forwards 3s;
+}
+
+@keyframes showImage {
+  0% {
+      opacity: 0;
+      transform: scale(0);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
